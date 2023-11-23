@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шапка сайта</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        background-image: url('bggif.gif');
+        height: 700px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #106acab9;
+        border-radius: 10px;
+        color: rgb(236, 236, 236);
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .main {
+        display: flex;
+        backdrop-filter: blur(7px);
+        border-radius: 10px;
+      }
+      .sidebar {
+        padding: 20px;
+        width: 25%;
+        display: flex;
+        border-radius: 10px;
+        flex-direction: column;
+      }
+      .content {
+        padding: 20px;
+        width: 75%;
+        font-size: 15px;
+        color: rgb(236, 236, 236);
+      }
+      button {
+        border-radius: 5px;
+        background-color: #3691f1b9;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 15px;
+        font-size: 17px;
+        margin: 10px 0 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Шапка сайта</h2>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <button id="button1" onclick="displayResult(this.id)">
+          Биография (о себе)
+        </button>
+        <button id="button2" onclick="displayResult(this.id)">
+          Адрес проживание
+        </button>
+        <button id="button3" onclick="displayResult(this.id)">
+          Учебное заведение
+        </button>
+        <button id="button4" onclick="displayResult(this.id)">
+          Lorem
+        </button>
+      </div>
+      <div class="content">
+        <h2 id="result">Поле для отображения контента выбранной страницы</h2>
+      </div>
+    </div>
+    <script>
+      function displayResult(buttonId) {
+        let result = document.getElementById("result");
+        switch (buttonId) {
+          case "button1":
+            result.textContent = "Биография (о себе)";
+            break;
+          case "button2":
+            result.textContent = "Адрес проживание";
+            break;
+          case "button3":
+            result.textContent = "Учебное заведение";
+            break;
+          case "button4":
+            result.textContent = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque qui impedit error temporibus porro unde nesciunt est. Facere amet quos, quisquam suscipit dicta a officia voluptatem reiciendis qui laboriosam minima! Iste assumenda architecto molestiae, placeat voluptates error id, possimus eligendi iusto sint nulla praesentium eaque repellat porro doloremque tempore distinctio ea cumque illo amet tempora sunt libero in? Laudantium, facilis? Nobis officiis voluptates explicabo fugiat quos quidem quibusdam quam, sit at repudiandae illo pariatur eos. Hic nesciunt tenetur dolores minima sequi id at consectetur neque! Voluptatibus eos quaerat aperiam unde. Explicabo quia perferendis veritatis doloribus fuga unde atque, qui consequatur sed suscipit in eaque est molestias, cumque eius. Pariatur voluptatum esse possimus nostrum amet. Dolore unde reprehenderit non saepe est. Recusandae consectetur culpa odio non minima, commodi vero laboriosam expedita mollitia iste unde impedit sit, ducimus nulla numquam quibusdam fuga praesentium eaque quam voluptates quas. Quae dignissimos deserunt omnis nesciunt. Non, unde voluptatibus! Nam unde nemo illo sunt provident, animi recusandae tempora nisi, quasi dolores laborum, ipsa eius repellat reprehenderit. ";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
